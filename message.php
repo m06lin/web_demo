@@ -93,8 +93,12 @@
           success: function(response) {
             // 顯示留言內容
             $.each(response.list, function(index, message) {
-                console.log(message);
-              var messageElement = $('<div class="card mb-3"><div class="card-body"><h5 class="card-title">' + message.name + '</h5><p class="card-text">' + message.message + '</p></div></div>');
+    
+              var messageElement = 
+              $('<div class="card mb-3"><div class="card-body"><h5 class="card-title">' + 
+                message.name + '</h5><p class="card-text">' + 
+                message.message + '</p></div></div>');
+
               $('#message-list').append(messageElement);
             });
           },

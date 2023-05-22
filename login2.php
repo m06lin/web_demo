@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>登入頁面</title>
+  <title>登入頁面2</title>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- 引入 Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -27,7 +27,7 @@
         var password = $('#password').val();
 
         $.ajax({
-          url: 'api/login.php',
+          url: 'api/login2.php',
           method: 'POST',
           dataType: 'json',
           data: {

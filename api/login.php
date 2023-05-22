@@ -2,8 +2,8 @@
 
 require_once 'pdodb.php' ;
 
-$logfile = dirname(__FILE__).'/log/login.html' ;
-file_put_contents($logfile, date("Y-m-d H:i:s")."<br>".'reqeust: POST= '.json_encode($_POST)."<br>", FILE_APPEND);
+$logfile = dirname(__FILE__).'/log/login.txt' ;
+file_put_contents($logfile, date("Y-m-d H:i:s")."\n".'reqeust: POST= '.json_encode($_POST)."\n", FILE_APPEND);
 
 $username=trim($_POST['username']);
 $password=trim($_POST['password']);
@@ -19,7 +19,7 @@ if($user){
   $response = array('success' => 0);
 }
 
-file_put_contents($logfile, "username: $username, password: $password"."<br>", FILE_APPEND);
+file_put_contents($logfile, "username: $username, password: $password"."\n", FILE_APPEND);
 
 echo json_encode($response);
 exit;
